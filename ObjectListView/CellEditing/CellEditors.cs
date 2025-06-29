@@ -153,7 +153,12 @@ namespace BrightIdeasSoftware
         /// <summary>
         /// Gets or sets the value shown by this editor
         /// </summary>
-        new public int Value {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        /// <summary>
+        /// Gets or sets the value shown by this editor
+        /// </summary>
+        new public int Value
+        {
             get { return Decimal.ToInt32(base.Value); }
             set { base.Value = new Decimal(value); }
         }
@@ -174,7 +179,9 @@ namespace BrightIdeasSoftware
             this.Maximum = 9999999;
         }
 
-        new public uint Value {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        new public uint Value
+        {
             get { return Decimal.ToUInt32(base.Value); }
             set { base.Value = new Decimal(value); }
         }
@@ -210,7 +217,12 @@ namespace BrightIdeasSoftware
         /// <summary>
         /// Gets or sets the value shown by this editor
         /// </summary>
-        public bool? Value {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        /// <summary>
+        /// Gets or sets the value shown by this editor
+        /// </summary>
+        public bool? Value
+        {
             get {
                 switch (this.CheckState) {
                     case CheckState.Checked: return true;
@@ -230,7 +242,12 @@ namespace BrightIdeasSoftware
         /// <summary>
         /// Gets or sets how the checkbox will be aligned
         /// </summary>
-        public new HorizontalAlignment TextAlign {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        /// <summary>
+        /// Gets or sets how the checkbox will be aligned
+        /// </summary>
+        public new HorizontalAlignment TextAlign
+        {
             get {
                 switch (this.CheckAlign) {
                     case ContentAlignment.MiddleRight: return HorizontalAlignment.Right;
@@ -276,7 +293,12 @@ namespace BrightIdeasSoftware
         /// <summary>
         /// Gets or sets the value shown by this editor
         /// </summary>
-        new public double Value {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        /// <summary>
+        /// Gets or sets the value shown by this editor
+        /// </summary>
+        new public double Value
+        {
             get { return Convert.ToDouble(base.Value); }
             set { base.Value = Convert.ToDecimal(value); }
         }

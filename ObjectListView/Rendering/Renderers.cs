@@ -3699,6 +3699,7 @@ namespace BrightIdeasSoftware {
         /// </summary>
         [Category("ObjectListView"),
         Description("The extra space that surrounds the cell when the SizingMode is TextBounds")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Size? ButtonPadding
         {
             get { return this.buttonPadding; }

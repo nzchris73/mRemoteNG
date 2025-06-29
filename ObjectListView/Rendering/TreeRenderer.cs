@@ -17,6 +17,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using System.Drawing.Drawing2D;
+using System.ComponentModel;
 
 namespace BrightIdeasSoftware {
 
@@ -39,6 +40,16 @@ namespace BrightIdeasSoftware {
             /// Should the renderer draw glyphs at the expansion points?
             /// </summary>
             /// <remarks>The expansion points will still function to expand/collapse even if this is false.</remarks>
+            [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+
+            #endregion
+
+            #region Configuration properties
+
+            /// <summary>
+            /// Should the renderer draw glyphs at the expansion points?
+            /// </summary>
+            /// <remarks>The expansion points will still function to expand/collapse even if this is false.</remarks>
             public bool IsShowGlyphs
             {
                 get { return isShowGlyphs; }
@@ -46,6 +57,10 @@ namespace BrightIdeasSoftware {
             }
             private bool isShowGlyphs = true;
 
+            /// <summary>
+            /// Should the renderer draw lines connecting siblings?
+            /// </summary>
+            [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
             /// <summary>
             /// Should the renderer draw lines connecting siblings?
             /// </summary>
@@ -59,6 +74,10 @@ namespace BrightIdeasSoftware {
             /// <summary>
             /// Return the pen that will be used to draw the lines between branches
             /// </summary>
+            [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+            /// <summary>
+            /// Return the pen that will be used to draw the lines between branches
+            /// </summary>
             public Pen LinePen
             {
                 get { return linePen; }
@@ -66,6 +85,13 @@ namespace BrightIdeasSoftware {
             }
             private Pen linePen;
 
+            /// <summary>
+            /// Should the renderer draw triangles as the expansion glyphs?
+            /// </summary>
+            /// <remarks>
+            /// This looks best with ShowLines = false
+            /// </remarks>
+            [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
             /// <summary>
             /// Should the renderer draw triangles as the expansion glyphs?
             /// </summary>

@@ -30,6 +30,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
+using System.ComponentModel;
 
 namespace BrightIdeasSoftware {
 
@@ -70,7 +71,12 @@ namespace BrightIdeasSoftware {
         /// <summary>
         /// Gets or sets whether an item should be checked when it is clicked
         /// </summary>
-        public bool CheckedOnClick {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        /// <summary>
+        /// Gets or sets whether an item should be checked when it is clicked
+        /// </summary>
+        public bool CheckedOnClick
+        {
             get {
                 return this.CheckedListBoxControl.CheckOnClick;
             }

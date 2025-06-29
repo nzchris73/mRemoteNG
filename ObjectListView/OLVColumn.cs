@@ -1262,7 +1262,15 @@ namespace BrightIdeasSoftware {
         /// <remarks>.NET will not allow column 0 to have any alignment except
         /// to the left. We can't change the basic behaviour of the listview,
         /// but when owner drawn, column 0 can now have other alignments.</remarks>
-        new public HorizontalAlignment TextAlign {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        /// <summary>
+        /// Gets or sets the horizontal alignment of the contents of the column.
+        /// </summary>
+        /// <remarks>.NET will not allow column 0 to have any alignment except
+        /// to the left. We can't change the basic behaviour of the listview,
+        /// but when owner drawn, column 0 can now have other alignments.</remarks>
+        new public HorizontalAlignment TextAlign
+        {
             get {
                 return this.textAlign.HasValue ? this.textAlign.Value : base.TextAlign;
             }

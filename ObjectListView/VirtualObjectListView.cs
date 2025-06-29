@@ -245,7 +245,16 @@ namespace BrightIdeasSoftware
         /// <remarks>
         /// This property is an implementation detail and should not be altered.
         /// </remarks>
-        protected internal bool CheckedObjectsMustStillExistInList {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        /// <summary>
+        /// Gets or sets whether or not an object will be included in the CheckedObjects
+        /// collection, even if it is not present in the control at the moment
+        /// </summary>
+        /// <remarks>
+        /// This property is an implementation detail and should not be altered.
+        /// </remarks>
+        protected internal bool CheckedObjectsMustStillExistInList
+        {
             get { return checkedObjectsMustStillExistInList; }
             set { checkedObjectsMustStillExistInList = value; }
         }
