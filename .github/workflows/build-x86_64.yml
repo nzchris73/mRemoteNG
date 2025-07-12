@@ -3,7 +3,7 @@ name: Build x86_64
 on:
   push:
     branches:
-      - v1.77.3-dev
+      - v1.78.2-dev
 
 jobs:
   Build-Debug-MSI:
@@ -120,8 +120,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "v1.77.3-dev-${GITHUB_RUN_NUMBER}" \
-                            --title "v1.77.3-dev-${GITHUB_RUN_NUMBER}" \
+          gh release create "v1.78.2-dev-${GITHUB_RUN_NUMBER}" \
+                            --title "v1.78.2-dev-${GITHUB_RUN_NUMBER}" \
                             --prerelease \
                             --generate-notes \
                             $GITHUB_WORKSPACE/debug-msi-x86_64.zip \
