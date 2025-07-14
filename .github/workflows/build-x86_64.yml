@@ -43,7 +43,7 @@ jobs:
           if-no-files-found: error
 
   Create-Release:
-    needs: [Build-Debug-MSI, Build-Debug-Portable, Build-Release]
+    needs: [Build-Release]
     runs-on: ubuntu-22.04
     steps:
       - name: 01. Copy repository
